@@ -1,0 +1,206 @@
+.course-section
+{
+    width: 100%;
+    max-width: 80%;
+    background-color: rgb(229, 242, 254);
+    height:auto;
+    display: block;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.course-section .title 
+{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.course-section .title h1
+{
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+.course-section .course-list
+{
+    width: 100%;
+}
+.course-section .course-list .course
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.course-section .course-list .course .img-course
+{
+    width: 80%;
+    height: 70.5vh;
+    border: 2px solid black;
+    overflow: hidden;
+}
+
+.course-section .course-list .course .img-course img
+{
+    width: 100%;
+    height: 70vh;
+    transition: transform 0.3s ease;
+}
+.course-section .course-list .course .img-course-1
+{
+    width: 80%;
+    height: 70.5vh;
+    border: 2px solid rgb(24, 1, 1);
+    overflow: hidden;
+}
+.course-section .course-list .course .img-course-1 .img-2
+{
+    width: 100%;
+    height: 70.5vh;
+    transition: all 0.3s ease;
+}
+.course-section .course-list .course .img-course-1 img:hover
+{
+    box-shadow: 3px 3px 2px rgb(92, 175, 230);
+    transform:scale(1.1);
+}
+.course-section .course-list .course .img-course img:hover
+{
+    box-shadow: 3px 3px 2px rgb(92, 175, 230);
+    transform:scale(1.1);
+}
+.course-section .course-list .detail 
+{
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    bottom: 12px;
+}
+.course-section .course-list .detail h3
+{
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+.course-section .course-list .detail p
+{
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+    font-size: 19px;
+    line-height: 1.6;
+}
+.course-section .course-list a
+{
+    text-decoration: none;
+}
+.course-section .course-list a button
+{
+    display: block;
+    padding: 10px 20px ;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid black;
+    transition: all 0.2s ease;
+    overflow: hidden;
+    box-shadow: 3px -1px 5px black;
+    margin: 20px;
+}
+.course-section .course-list a button:hover
+{
+    background-color: blue;
+    transform: scale(1.05);
+    color: white;
+    cursor: pointer;
+}
+
+footer
+{
+    max-width: 100%;
+    background-color: rgb(100, 100, 100);
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding:10px 400px;
+}
+footer h3
+{
+    text-align: center;
+    font-size: 1.6em;
+    color: rgb(6, 83, 61);
+    text-shadow: 2px 2px 2px rgb(240, 213, 213);
+
+}
+footer  img
+{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+footer .kdr
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+footer .kdr .one .boer
+{
+    border: 2px double black;
+    width: 102px;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    left: 0px;
+    margin-top: 10px;
+}
+footer .kdr .one .boer button
+{
+    width: 100px;
+    height: 40px;
+    background-color: rgb(56, 82, 83);
+}
+footer .kdr .one .boer button a
+{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    color: aliceblue;
+    transition: all 1s ease;
+}
+footer .kdr .one .boer button:hover
+{
+    transform: scale(1.2);
+}
+footer .kdit
+{
+    width: 100%;
+}
+footer .kdit .dsc
+{
+    margin-top: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+.last
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.last img
+{
+    width: 80px;
+    height: 80px;
+}

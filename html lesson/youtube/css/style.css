@@ -1,0 +1,27 @@
+*
+{
+    margin: 20px 10px;
+}
+table,th,tr,td
+{
+    border: 2px solid black;
+    border-collapse: collapse;
+    width: 300px;
+    height: 25px;
+    text-align: center;
+    padding: 5px 0px;
+    color: rgb(60, 37, 7);
+    
+}
+tr:nth-child(even)
+{
+    background-color: blue;
+}
+th
+{
+    background-color: chartreuse;
+}
+tr:nth-child(odd)
+{
+    background-color: chocolate;
+}

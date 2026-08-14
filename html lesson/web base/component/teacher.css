@@ -1,0 +1,145 @@
+
+.container
+{
+    width: 100%;
+    max-width: 80%;
+    background-color:rgb(229, 242, 254);
+    margin: 0 auto;
+    height: 190vh;
+}
+.container .dsc
+{
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+}
+.container .dsc h1
+{
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+.container .dsc p
+{
+    margin-bottom: 25px;
+}
+.container .our-lecturer
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,400px);
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.container .our-lecturer .lecturer .crop
+{
+    border: 2px solid black;
+    overflow: hidden;
+    width: 399px;
+    height: 42vh;
+    box-shadow: 2px 2px 5px black;
+    border-radius: 10px;
+}
+.container .our-lecturer .lecturer img
+{
+    width: 400px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+.container .our-lecturer .lecturer img:hover
+{
+   box-shadow: 3px 3px 5px white;
+   transform: scale(1.1);
+}
+.container .our-lecturer .lecturer p
+{
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+footer
+{
+    max-width: 80%;
+    background-color: rgb(100, 100, 100);
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding:10px 400px;
+}
+footer h3
+{
+    text-align: center;
+    font-size: 1.6em;
+    color: rgb(6, 83, 61);
+    text-shadow: 2px 2px 2px rgb(240, 213, 213);
+
+}
+footer  img
+{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+footer .kdr
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+footer .kdr .one .boer
+{
+    border: 2px double black;
+    width: 102px;
+    height: 45px;
+    overflow: hidden;
+    position: relative;
+    left: 0px;
+    margin-top: 10px;
+}
+footer .kdr .one .boer button
+{
+    width: 100px;
+    height: 40px;
+    background-color: rgb(56, 82, 83);
+}
+footer .kdr .one .boer button a
+{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    color: aliceblue;
+    transition: all 1s ease;
+}
+footer .kdr .one .boer button:hover
+{
+    transform: scale(1.2);
+}
+footer .kdit
+{
+    width: 100%;
+}
+footer .kdit .dsc
+{
+    margin-top: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+.last
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.last img
+{
+    width: 80px;
+    height: 80px;
+}

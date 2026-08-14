@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambodia Map Explorer</title>
+    <link rel="icon" href="images.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Angkor&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('mountain.jpg');
+            background-attachment: fixed;
+            background-position: center;   
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+    
+        .header {
+           background: linear-gradient(135deg, rgb(8, 220, 235), rgb(0, 180, 200));
+           text-align: center;
+           padding: 20px 10px;
+           box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        .headertext {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-family: "Angkor", serif;
+            font-size: 24px;
+            font-weight: 400;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+        }
+
+        .tii {
+            display: flex;
+            justify-content: center; /* Dynamically centers the map image regardless of monitor size */
+            padding: 30px 15px;
+        }
+        .tii img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border-radius: 12px;
+        }
+
+        .container {
+            display: grid;
+            /* Auto-calculates columns cleanly, completely fixing the floating card layout break */
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            max-width: 1300px;
+            margin: 0 auto;
+            gap: 20px;
+            padding: 40px 20px;
+        }
+
+        .takeo {
+            background-color: rgba(255, 255, 255, 0.95);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            border-radius: 10px; /* Modern curved edges instead of sharp blocks */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            text-decoration: none; 
+            color: #222222;
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+        }
+        .takeo:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 26px rgba(0, 0, 0, 0.6);
+            background-color: #ffffff;
+        }
+
+        .takeo img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .takeo h2 {
+            margin: 0;
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        hr {
+            margin: 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.3), rgba(255,255,255,0));
+        }
+        .container-2 {
+            background-color: #111111;
+            color: #b3b3b3;
+            padding: 50px 20px 20px 20px;
+        }
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            padding-bottom: 35px;
+        }
+        .footer-section h3 {
+            color: #08dceb;
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-top: 0;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-section ul li {
+            margin-bottom: 14px;
+            font-size: 14px;
+        }
+        .footer-section a {
+            color: #b3b3b3;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+        .footer-section a:hover {
+            color: #08dceb;
+            transform: translateX(4px);
+        }
+        .footer-bottom {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 13px;
+        }
+        .footer-bottom p {
+            margin: 0;
+        }
+        .footer-bottom-links a {
+            margin-left: 15px;
+            color: #777777;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-bottom-links a:hover {
+            color: #08dceb;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <a href="#" class="headertext">ផែនទីខេត្តនីមួយៗនៃប្រទេសកម្ពុជា</a>
+    </div>
+
+    <div class="tii">
+        <img src="erasebg-transformed.png" usemap="#image-map" alt="Cambodia Interactive Map">
+        <map name="image-map">
+            <area title="Kompong chhnang" href="kompongchnang.html" coords="321,351,315,367,303,381,289,389,285,414,291,434,301,453,320,475,344,475,357,467,370,463,387,456,391,441,397,425,395,404,393,388,397,377,390,359,384,348,364,340,349,338,338,348" shape="poly">
+            <area title="Kompongspue" href="kompongspue.html" coords="285,427,271,430,265,449,254,450,243,447,238,457,221,461,223,494,244,512,264,520,269,554,286,585,315,576,355,587,362,583,368,549,376,533,361,527,373,462,350,474,318,477" shape="poly">
+            <area title="Kompongcham" href="kompongcham.html" coords="389,449,398,434,398,421,399,396,415,397,446,406,451,399,440,373,459,372,474,375,485,358,499,361,510,355,538,360,537,386,510,391,479,459,429,476,413,458,393,464" shape="poly">
+            <area title="PhnomPenh" href="Phnompenh.html" coords="399,488,381,497,382,508,382,524,388,528,393,523,407,521,408,512,404,503,405,493" shape="poly">
+            <area title="Kandal" href="kandal.html" coords="447,615,433,610,421,615,421,607,415,604,417,577,411,568,403,545,383,543,377,530,359,529,367,487,375,466,386,457,389,463,382,497,381,509,383,524,388,529,395,524,406,520,408,512,405,503,404,494,398,490,388,493,385,481,388,470,394,467,402,468,411,460,425,465,427,477,440,479,434,505,461,533,457,562,446,591" shape="poly">
+            <area title="Takeo" href="takeo.html" coords="363,583,371,548,380,540,389,545,402,546,407,565,418,577,414,601,429,644,406,659,395,675,367,675,361,658,368,635,362,618,340,619,335,596,318,590,321,580,353,588" shape="poly">
+            <area title="Kampot" href="kompot.html" coords="296,673,249,671,241,651,241,614,260,596,275,575,290,585,298,586,319,576,320,587,336,601,340,616,360,621,367,639,364,672,332,692,324,689,318,667,305,664" shape="poly">
+            <area title="Kep" href="Kep.html" coords="298,669,301,683,315,685,323,688,323,679,317,668,306,663" shape="poly">
+            <area title="Stung Treng" href="stung treng.html" coords="499,135,499,147,507,179,502,200,507,232,549,253,558,251,594,215,612,214,641,206,669,220,669,207,662,185,664,178,680,185,706,176,697,150,677,139,673,119,665,90,675,71,669,31,657,16,638,39,614,32,612,53,574,55,596,108,580,128,536,124" shape="poly">
+            <area title="Ratanakiri" href="ratanakiri.html" coords="673,220,701,242,745,247,751,240,747,225,761,222,773,216,793,228,810,222,825,227,832,188,807,144,802,112,789,109,782,91,789,63,793,44,806,40,818,1,803,7,799,19,777,19,751,46,737,37,724,55,705,60,685,40,673,40,671,77,666,95,673,135,699,155,706,181,681,189,666,179,665,195" shape="poly">
+        </map>              
+    </div>
+
+    <hr>
+
+    <div class="container">
+         <a href="takeo.html" class="takeo">
+             <img src="takeo logo.jpg" alt="Takeo">
+             <h2>Takeo Province</h2>
+         </a>
+         <a href="kandal.html" class="takeo">
+             <img src="kandal.jpg" alt="Kandal">
+             <h2>Kandal Province</h2>
+         </a>
+         <a href="Phnompenh.html" class="takeo">
+             <img src="Phnompenh.jpg" alt="Phnom Penh">
+             <h2>Phnom Penh</h2>
+         </a>
+         <a href="kompot.html" class="takeo">
+             <img src="Kampot.jpg" alt="Kampot">
+             <h2>Kampot Province</h2>
+         </a>
+         <a href="kompongspue.html" class="takeo">
+             <img src="Kampong spue.jpg" alt="Kampong Spue">
+             <h2>Kampong Spue Province</h2>
+         </a>
+         <a href="Kep.html" class="takeo">
+             <img src="kep.jpg" alt="Kep">
+             <h2>Kep Province</h2>
+         </a>
+         <a href="kompongsoum.html" class="takeo">
+             <img src="kampong soum.jpg" alt="Kampong Soum">
+             <h2>Kampong Soum Province</h2>
+         </a>
+         <a href="svay rieng.html" class="takeo">
+             <img src="svay rieng.jpg" alt="Svay Rieng">
+             <h2>Svay Rieng Province</h2>
+         </a>
+         <a href="prey veng.html" class="takeo">
+             <img src="prey veng.jpg" alt="Prey Veng">
+             <h2>Prey Veng Province</h2>
+         </a>
+         <a href="tbong khmum.html" class="takeo">
+             <img src="tbong Khmum.jpg" alt="Tbong Khmum">
+             <h2>Tbong Khmum Province</h2>
+         </a>
+         <a href="kompongcham.html" class="takeo">
+             <img src="kompongcham.jpg" alt="Kampong Cham">
+             <h2>Kampong cham Province</h2>
+         </a>
+         <a href="kompongchnang.html" class="takeo">
+             <img src="kampongchnang.jpg" alt="Kampong Chnang">
+             <h2>Kampong Chnang Province</h2>
+         </a>
+         <a href="kompongthom.html" class="takeo">
+             <img src="Kampong thom.jpg" alt="Kampong Thom">
+             <h2>Kampong Thom Province</h2>
+         </a>
+         <a href="kratie.html" class="takeo">
+             <img src="kratie.jpg" alt="Kratie">
+             <h2>Kratie Province</h2>
+         </a>
+         <a href="modulkiri.html" class="takeo">
+             <img src="mondulkiri.jpg" alt="Mondulkiri">
+             <h2>Mondulkiri Province</h2>
+         </a>
+         <a href="ratanakiri.html" class="takeo">
+             <img src="ratanakiri.jpg" alt="Ratanakiri">
+             <h2>Ratanakiri Province</h2>
+         </a>
+         <a href="stung treng.html" class="takeo">
+             <img src="stung treng.jpg" alt="Stung Treng">
+             <h2>Stung Treng Province</h2>
+         </a>
+         <a href="preahvihea.html" class="takeo">
+             <img src="preah vihear.jpg" alt="Preah Vihear">
+             <h2>Preah Vihear Province</h2>
+         </a>
+         <a href="siem reap.html" class="takeo">
+             <img src="siemreab.jpg" alt="Siem Reap">
+             <h2>Siem Reab Province</h2>
+         </a>
+         <a href="ordarmeanchey.html" class="takeo">
+             <img src="orddar meanchey.jpeg" alt="Oddar Meanchey">
+             <h2>Orddar Meanchey Province</h2>
+         </a>
+         <a href="btmchey.html" class="takeo">
+             <img src="Banteaymeachey.jpg" alt="Banteay Meanchey">
+             <h2>Banteay Meanchey Province</h2>
+         </a>
+         <a href="pailin.html" class="takeo">
+             <img src="Pailin.jpg" alt="Pailin">
+             <h2>Pailin Province</h2>
+         </a>
+         <a href="btb.html" class="takeo">
+             <img src="battambang.jpg" alt="Battambang">
+             <h2>Battambang Province</h2>
+         </a>
+         <a href="pursat.html" class="takeo">
+             <img src="pursat.jpg" alt="Pursat">
+             <h2>Pursat Province</h2>
+         </a>
+         <a href="kohkong.html" class="takeo">
+             <img src="Koh kong.png" alt="Koh Kong">
+             <h2>Koh Kong Province</h2>
+         </a>
+    </div>
+
+    <hr>
+
+    <div class="container-2">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About This Map</h3>
+                <p style="font-size: 14px; line-height: 1.6; margin: 0;">
+                    An interactive map exploration of Cambodia's beautiful provinces. Click on any region or province card to discover more about its local culture, logos, and geography.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Address</h3>
+                <ul>
+                    <li>Phum Phol, Khan Meanchey</li>
+                    <li>Sangkat Stueng Meanchey</li>
+                    <li>Phnom Penh, Cambodia</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><a href="https://web.facebook.com/"><img src="facebook_logo-removebg-preview.png" width="18px" alt="Facebook"> Facebook</a></li> 
+                    <li><a href="https://t.me/Somsak900"><img src="telegram_logo-removebg-preview.png" width="18px" alt="Telegram"> Telegram</a></li> 
+                    <li><a href="https://www.youtube.com/@ctjgaming7856"><img src="youtube_logo-removebg-preview.png" width="18px" alt="YouTube"> YouTube</a></li> 
+                    <li><a href="tel:066244980"><img src="logo phone).png" width="18px" alt="Phone"> 066244980</a></li> 
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Cambodia Map Project. All Rights Reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

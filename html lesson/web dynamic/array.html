@@ -1,0 +1,114 @@
+<!DOCTYPE html
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table
+        {
+            border-collapse: collapse;
+            text-align: center;
+        }
+        tr, td 
+        {
+            border: 1px solid black;
+            padding: 8px 13px;
+        }
+    </style>
+</head>
+<body>
+    <h1>array</h1>
+    <!-- <table border="1">
+        <tr>
+            <th>NO.</th>
+            <th>Contact name</th>
+        </tr>
+    <script>
+        let n =1;
+        let contacts = ["raa amm" , "raa orn" , 2 ,3 ,4 ,5];
+        for (let i = 0 ; i <contacts.length ; i++)
+        {
+            document.write("<tr>");
+            document.write("<td>"+ n++ ); 
+            document.write("<td>" + contacts[i]);
+            document.write("</tr>");
+        }
+    </script>
+    </table> -->
+    <!-- <table>
+        <th>NO</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>Email</th>
+        <script>
+            let n =1;
+            let array = [
+                ['p001','bora','male' ,16,'bora82@gmail.com'],
+                ['p002','borong','male' ,17,'bor8ong2@gmail.com'],
+                ['p003','borono','male' ,18,'borono82@gmail.com'],
+
+            ];
+            for (let i = 0 ; i< array.length ; i++)
+        {
+            document.write("<tr>");
+            document.write("<td>" + n++);
+            for (let j=0 ; j<5 ; j++)
+            document.write("<td>" + array[i][j]);
+            document.write("</tr>");
+        }
+        </script>
+    </table> -->
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Grade</td>
+            <td>HTML</td>
+            <td>CSS</td>
+            <td>JS</td>
+            <td>MATH</td>
+            <td>Total</td>
+            <td>Average</td>
+            <td>Grade</td>
+        </tr>
+        <script>
+            let array = [
+                ["p001" , "Sok pisey" , "Male" , 67 , 72 , 77 , 82],
+                ["p002" , "Ratanak" , "Female" , 67 , 74 , 79 , 83],
+                ["p003" , "Chatha" , "Male" , 87 , 76 , 81 , 84],
+                ["p004" , "Chathou" , "Female" , 56 , 78, 83 , 85],
+                ["p005" , "Chaterg" , "Male" , 89 , 80 , 85 , 86],
+                ["p006" , "Sita" , "Female" , 78 , 82 , 87 , 87],
+                ["p007" , "GIGI" , "Male" , 78 , 84 , 89 , 88],
+            ];
+            for ( let i = 0 ; i <array.length ; i++)
+            {
+                document.write("<tr>")
+                    for (let j = 0 ; j <7 ; j++)
+                {
+                    document.write("<td>" + array[i][j]);
+                    
+                }
+                let total = 0;
+                total = array[i][3]+array[i][4]+array[i][5]+array[i][6];
+                let avg = total/4;
+                let grade ;
+                document.write("<td>" + total);
+                document.write("<td>" + avg);
+                if (avg>=90)grade ="A";
+                else if (avg>=80)grade ="B";
+                else if (avg>=70)grade ="C";
+                else if (avg>=60)grade ="D";
+                else if (avg>=50)grade ="E";
+                else
+                grade ="f";
+                document.write("<td>" + grade);
+                document.write("</tr>");
+            }
+        </script>
+    </table>
+</body>
+</html>

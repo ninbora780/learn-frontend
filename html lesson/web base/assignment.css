@@ -1,0 +1,404 @@
+html
+{
+    scroll-behavior:smooth;
+}
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Noto+Sans+Khmer:wght@100..900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+      font-family: "Noto Sans Khmer","Merriweather Sans" , sans-serif ;
+}
+.nav-bar
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px 30px;
+    background-color: rgb(219, 203, 234);
+    position: sticky;
+    top: 0;  
+    z-index: 100;
+    border-bottom: 1px solid rgb(198, 195, 211);
+}
+.nav-bar .logo
+{
+    width: 25%;
+    display: flex;
+    align-items: center;
+}
+.nav-bar a
+{
+    text-decoration: none;
+    color: rgb(106, 13, 236);
+}
+.nav-bar .responsive-nav
+{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-bar .responsive-nav ul 
+{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-left: 100px;
+    justify-content: center;
+    padding: 20px 0;
+}
+.nav-bar .responsive-nav .nav-center li a
+{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    color: black;
+    transition: all 0.4s ease;
+    position: relative;
+    margin-left: 25px;
+}
+.nav-bar .responsive-nav .nav-center li a::before
+{
+    content: " ";
+    height: 5px;
+    width: 0%;
+    position: absolute;
+    bottom: 2px;
+    transition: 0.4s;
+    background-color: rgba(124, 4, 243, 0.664);
+}
+.nav-bar .responsive-nav .nav-center li a:hover::before
+{
+    width: 100%;
+    border-radius: 5px;
+}
+.nav-bar .responsive-nav .nav-end
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-bar .responsive-nav .nav-end .search-box
+{
+    display: flex;
+    border: 1px solid black;
+    background-color: rgb(45, 229, 63);
+    margin-right: 20px;
+}
+.nav-bar .responsive-nav .nav-end .search-box input
+{
+    padding: 7px;
+}
+.nav-bar .responsive-nav .nav-end .search-box i
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+.nav-bar .responsive-nav .nav-end i{
+    font-size: 28px;
+}
+.container
+{
+    width: 100%;
+}
+.container  .img-container
+{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../image/blue.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.container .img-container .modal
+{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+}
+.container .img-container .modal h2
+{
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: 3em;
+    text-shadow: 3px 5px 1.7px black;
+}
+.container .img-container .modal h3
+{
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-shadow: 3px 3px 1px black;
+}
+.container .img-container .modal a
+{
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blueviolet;
+    text-shadow: 2px 1px black;
+    width: 150px;
+    height: 60px;
+    border-radius: 5px;
+    outline: 1px solid rgb(168, 192, 219);
+    transition: all 0.2s linear;
+}
+.container .img-container .modal a:hover
+{
+    background-color: black;
+}
+.nav-bar .humbagar
+{
+    display: none;
+}
+@media(max-width: 1280px)
+{
+    .nav-bar .responsive-nav
+{
+    width: 85%;
+}
+.nav-bar .logo
+{
+    width: 15%;
+}
+.nav-bar .logo h1
+{
+    font-size: 25px;
+}
+.nav-bar .responsive-nav
+{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-bar .responsive-nav .nav-center 
+{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+    padding: 20px 0;
+    margin-left: 0;
+}
+.nav-bar .responsive-nav .nav-center li a
+{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    color: black;
+    transition: all 0.4s ease;
+    position: relative;
+    margin-left: 20px;
+}
+.container .img-container .modal h2
+{
+    font-size: 2.8em;
+}
+.container .img-container .modal h3
+{
+    font-size: 1.5em;
+}
+.container .img-container .modal a
+{
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blueviolet;
+    text-shadow: 2px 1px black;
+    width: 150px;
+    height: 60px;
+    border-radius: 5px;
+    outline: 1px solid rgb(168, 192, 219);
+    transition: all 0.2s linear;
+}
+}
+@media(max-width: 900px)
+{
+
+    .nav-bar
+{
+    padding: 20px;
+    position: relative;
+}
+    .nav-bar .humbagar
+    {
+        display: block;
+        font-size: 35px;
+    }
+    .nav-bar .logo 
+    {
+        width: 25%;
+    }
+    .nav-bar .responsive-nav
+    {    
+       display: none;
+    }
+    .nav-bar .responsive-nav.active
+    {
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        right: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: antiquewhite;
+        
+    }
+    .nav-bar .responsive-nav.active .nav-center
+    {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .nav-bar .responsive-nav.active .nav-center li a 
+    {
+        display: block;
+        margin-top: 20px;
+    }
+    .nav-bar .responsive-nav.active .nav-end
+    {
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 20px;
+        position: relative;
+        left: 21px;
+    
+    }
+    .nav-bar .responsive-nav.active .nav-end i 
+    {
+        margin-top: 10px;
+    }
+    .container .img-container .modal h2
+{
+    font-size: 2.3em;
+}
+.container .img-container .modal h3
+{
+    font-size: 1.5em;
+}
+.container .img-container .modal a
+{
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blueviolet;
+    text-shadow: 2px 1px black;
+    width: 150px;
+    height: 60px;
+    border-radius: 5px;
+    outline: 1px solid rgb(168, 192, 219);
+    transition: all 0.2s linear;
+}
+    
+}
+@media(max-width: 660px)
+{
+
+    .nav-bar
+{
+    padding: 20px;
+    position: relative;
+}
+    .nav-bar .humbagar
+    {
+        display: block;
+        font-size: 35px;
+    }
+    .nav-bar .logo 
+    {
+        width: 25%;
+    }
+    .nav-bar .responsive-nav
+    {    
+       display: none;
+    }
+    .nav-bar .responsive-nav.active
+    {
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        right: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: antiquewhite;
+        
+    }
+    .nav-bar .responsive-nav.active .nav-center
+    {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .nav-bar .responsive-nav.active .nav-center li a 
+    {
+        display: block;
+        margin-top: 20px;
+    }
+    .nav-bar .responsive-nav.active .nav-end
+    {
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 20px;
+        position: relative;
+        left: 21px;
+    
+    }
+    .nav-bar .responsive-nav.active .nav-end i 
+    {
+        margin-top: 10px;
+    }
+    .container .img-container .modal h2
+{
+    font-size: 1.7em;
+}
+.container .img-container .modal h3
+{
+    font-size: 1.3em;
+}
+.container .img-container .modal a
+{
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blueviolet;
+    text-shadow: 2px 1px black;
+    width: 150px;
+    height: 60px;
+    border-radius: 5px;
+    outline: 1px solid rgb(168, 192, 219);
+    transition: all 0.2s linear;
+}
+    
+}

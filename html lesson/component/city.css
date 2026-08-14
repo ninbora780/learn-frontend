@@ -1,0 +1,278 @@
+.city-page
+{
+    background-color: #ebebeb;
+    width: 100%;
+    max-width: 90%;
+    margin: auto;
+    padding: 30px 100px;
+}
+.title-capital
+{
+    background-color: #ebebeb;
+    width: 100%;
+    max-width: 90%;
+    margin: auto;
+    text-align: center;
+    font-size: 4em;
+    padding-top: 5px;
+}
+.content-page
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.content-page h1
+{
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+.city-page .top-sights .top-sights-content img
+{
+    width: 100%;
+    height: 40vh;
+}
+.content-page .dsc
+{
+    margin-top: 15px;
+    text-indent: 80px;
+    text-align: justify;
+    background-color: #fff;
+    padding: 5px;
+}
+.small-title
+{
+    text-decoration: underline;
+    font-size: 1.8em;
+    margin-top: 20px;
+}
+/* top sights */
+.top-sights
+{
+    margin-top: 30px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+}
+.top-sights .top-sights-content img
+{
+    width: 100%;
+    height: 500px;
+    border-radius: 6px;
+}
+.top-sights .top-sights-content
+{
+    width: 95%;
+    height: 705px;
+    background-color: #d8d8d8;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 6px;
+    box-shadow: 2px 0 5px #333;
+    transition: all 0.2s linear;
+}
+.top-sights .top-sights-content:hover
+{
+    box-shadow: 0px 2px 5px #333;
+}
+.top-sights .top-sights-content h2
+{
+    margin: 10px 0 0 0;
+    font-size: 30px;
+}
+.top-sights .top-sights-content .rate
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+}
+.top-sights .top-sights-content .rate div{
+    margin-right: 8px;
+}
+.top-sights .top-sights-content .rate .rate-number
+{
+    font-weight: bold;
+}
+.top-sights .top-sights-content .btn
+{
+    width:90px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #333;
+    text-decoration: none;
+    color: #d8d8d8;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:30px;
+    box-shadow: 2px 2px 5px black;
+    font-weight: bold;
+}
+
+@media(max-width:1280px)
+{
+        .top-sights .top-sights-content
+{
+    width: 95%;
+    height: 775px;
+    background-color: #d8d8d8;
+    padding: 15px;
+    margin-top: 20px;
+    margin: auto;
+    border-radius: 6px;
+    box-shadow: 2px 0 5px #333;
+    transition: all 0.2s linear;
+}
+    .city-page
+{
+    background-color: #ebebeb;
+    width: 100%;
+    max-width: 90%;
+    margin: auto;
+    padding: 30px 90px;
+}
+    .top-sights
+{
+    margin-top: 30px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    
+}
+    .city-page .top-sights .top-sights-content img
+    {
+    width: 100%;
+    height: 47vh;
+    }
+    .content-page .dsc
+    {
+    font-size: 14px;
+    margin-top: 15px;
+    text-indent: 80px;
+    text-align: justify;
+    background-color: #fff;
+    padding: 5px;
+    }
+}
+@media(max-width:992px)
+{
+    .city-page
+{
+    background-color: #ebebeb;
+    width: 100%;
+    max-width: 90%;
+    margin: auto;
+    padding: 30px 80px;
+}
+    .top-sights .top-sights-content
+{
+    width: 95%;
+    height: 735px;
+    background-color: #d8d8d8;
+    padding: 15px;
+    margin-top: 20px;
+    margin: auto;
+    border-radius: 6px;
+    box-shadow: 2px 0 5px #333;
+    transition: all 0.2s linear;
+}
+    .top-sights
+{
+    margin-top: 30px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+    
+    .city-page .top-sights .top-sights-content img
+    {
+    width: 100%;
+    }
+    .content-page .dsc
+    {
+    font-size: 14px;
+    margin-top: 15px;
+    text-indent: 80px;
+    text-align: justify;
+    background-color: #fff;
+    padding: 5px;
+    }
+}
+@media(max-width:768px)
+{
+        .top-sights .top-sights-content
+{
+    width: 95%;
+    height: 755px;
+    background-color: #d8d8d8;
+    padding: 15px;
+    margin-top: 20px;
+    margin: auto;
+    border-radius: 6px;
+    box-shadow: 2px 0 5px #333;
+    transition: all 0.2s linear;
+}
+    
+        .city-page
+{
+    background-color: #ebebeb;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    padding: 30px 70px;
+}
+    .title-capital
+    {
+        max-width: 100%;
+    }
+    .city-page .top-sights .top-sights-content img
+    {
+        width: 100%;
+        margin: auto;
+        height: 50vh;
+    }
+    .content-page .dsc
+    {
+        font-size: 12.8px;
+        text-indent: 40px;
+    }
+}
+@media(max-width:600px)
+{
+        .city-page
+{
+    background-color: #ebebeb;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    padding: 30px 30px;
+}
+      .city-page .top-sights .top-sights-content img
+    {
+        width: 100%;
+        height: 40vh;
+        margin: auto;
+    }
+    .content-page .dsc
+    {
+        font-size: 12px;
+        text-indent: 40px;
+    }
+      .city-page  .top-sights .top-sights-content
+{
+    width: 95%;
+    height: 705px;
+    background-color: #d8d8d8;
+    padding: 15px;
+    margin-top: 20px;
+    margin: auto;
+    border-radius: 6px;
+    box-shadow: 2px 0 5px #333;
+    transition: all 0.2s linear;
+}
+}

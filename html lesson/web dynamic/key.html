@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script>
+        $(()=>{
+           $("button").click(function(){
+            let a = parseFloat($("#a").val());
+            let b =parseFloat( $("#b").val());
+            let add = $(this).hasClass("add");
+            let sub = $(this).hasClass("sub");
+            let mul = $(this).hasClass("mul");
+            let divide = $(this).hasClass("divide");
+            let result;
+            if(add){
+                result = a + b;
+            }
+            else if(sub){
+                result = a - b;
+            }
+            else if(mul){
+                result = a * b;
+            }
+            else
+            {
+                if(b==0){
+                    result = ("cannot divide by zero!");
+                }
+                else{
+                    result = a/b;
+                }
+            }
+            $(".result").html("Result : " + result);
+           });
+        });
+    </script>
+    <style>
+        input
+        {
+            padding: 10px;
+        }
+        button{
+            padding: 8px 18px;
+            font-size: 20px;
+        }
+        button:hover{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculate</h1>
+    <label for="a">A : </label>
+    <input type="number " id="a" placeholder="Enter number"><br> <br>
+    <label for="b">B : </label>
+    <input type="number " id="b" placeholder="Enter number"> <br><br>
+    <button class="add"> + </button>
+    <button class="sub"> - </button>
+    <button class="mul" > x </button>
+    <button class="divide"> / </button>
+    <p class="result">result will be show here...</p>
+</body>
+</html>

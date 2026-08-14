@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration form</title>
+    <style>
+        body
+        {
+            background-color: rgb(233, 192, 140);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            font-family: sans-serif;
+        }
+        h1
+        {
+            text-align: center;
+        }
+        table tr 
+        {
+            line-height: 2.4;
+        }
+        table tr td input
+        {
+            padding: 7px 7px;
+            background-color: rgb(247, 228, 203);
+            border: none;
+        }
+         button 
+        {
+            background-color: blanchedalmond;
+            padding: 7px 10px;
+            box-sizing: border-box;
+            box-shadow: 2px 2px 4px black;
+            position: relative;
+            left: 220px;
+        }
+        table tr td textarea
+        {
+            background-color: blanchedalmond;
+            border: none;
+        }
+        select
+        {
+            background-color: blanchedalmond;
+            border: none;
+            padding: 7px 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Registration Form</h1>
+    <table cellpadding = "2 8">
+        <tr>
+            <td><label for="roll">Roll No. : </label></td>
+            <td colspan="2"><input size="40" type="text"></td>
+        </tr>
+        <tr>
+            <td><label for="student">Student Name :</label></td>
+            <td><input style="width: 132px;" type="text" placeholder="First name"> - <input size="16" type="text" placeholder="Last name"></td>
+        </tr>
+        <tr>
+            <td><label for="father">Father name : </label></td>
+            <td colspan=""><input size="40" type="text"></td>
+        </tr>
+        <tr>
+            <td><label for="Date">Date of birth : </label></td>
+            <td><input style="width: 40px;" type="number" placeholder="Day">
+            - <input style="width: 50px;" type="number" size="2" placeholder="Month">
+            - <input style="width: 50px;" type="number" size="2" placeholder="Year">
+            <b><i> (DD-MM-YYYY)</i></b></td>   
+        </tr>
+        <tr>
+            <td><label for="Mobile">Mobile no. : </label></td>
+            <td><input style="width: 38px;" type="number">
+            - <input style="width: 230px;" type="number"></td>
+        </tr>
+        <tr>
+            <td><label for="email">Email id : </label></td>
+            <td colspan="2"><input size="40"  type="email"></td>
+        </tr>
+        <tr>
+            <td><label for="password">Password : </label></td>
+            <td colspan="2"><input size="40"  type="password"></td>
+        </tr> 
+        <tr>
+            <td><label for="gender">Gender : </label></td>
+            <td ><input type="radio" name="kdr">Male
+            <input type="radio" name="kdr">female</td>
+        </tr>
+        <tr>
+            <td><label for="Departmen">Department : </label></td>
+            <td><input type="checkbox">CSE
+                <input type="checkbox">IT
+                <input type="checkbox">ECE
+                <input type="checkbox">Civil
+                <input type="checkbox">Mech
+            </td>
+            </tr>
+        <tr>
+            <td><label for="course">Course : </label></td>
+            <td><select>
+                <option value="select">=========Select Current Course's=========</option>
+                <option value="i love you">I love you</option>
+                <option value="i love you">I hate you</option>
+                <option value="i love you">I miss you</option>
+                <option value="i love you">I want to kiss you</option>
+            </select></td>
+        </tr
+        <tr>
+            <td><label for="stund">Student photo : </label></td>
+            <td><input style="background-color: rgb(233, 192, 140); " type="file"></td>
+        </tr>
+        <tr>
+            <td><label for="city">City : </label>
+            </td>
+            <td colspan="2"><input size="40" type="text"></td>
+        </tr>
+        <tr>
+            <td><label for="">Address : </label></td>
+            <td> <textarea cols="40" rows="5"></textarea></td>
+        </tr>
+        <tr>
+            <td><button>Register</button></td>
+        </tr>
+    </table>
+    <h2>hello</h2>
+</body>
+</html>

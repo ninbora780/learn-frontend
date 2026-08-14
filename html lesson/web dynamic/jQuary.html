@@ -1,0 +1,77 @@
+<!-- feature​​​ included :
+ - support all version of css
+ - support events and utilities
+ - works with Ajax
+ - creates usability, effects and animations
+ - Work in all popular internet browsers
+ - Small file size
+ - can combine with prototype
+ - can work with other coding languages 
+
+ +
+
+ - A dollar sign to define jQuery
+ - A (selector) to "query (or find)" HTML elements
+ - A jQuery action() to be performed on the element(s)
+
+ ex : 
+
+ - $(this).hide() -hides current element
+ - $("p").hide() -hides all paragraphs
+ - $("p.test").hide() -hides all paragraphs with class = "test"
+ - $("#test").hide() -hides the element with id = "test"
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script>
+        $(document).ready(()=>
+    {
+        $("#show").click(()=>
+    {
+        $("p").show('slow');
+    });
+        $("#hide").click(()=>
+    {
+        $("p").hide('fast');
+    });
+        $(".h1").click(()=>
+    {
+        $(".h1").hide('slow');
+    });
+        $(".h2").click(()=>
+    {
+        $(".h2").hide('slow');
+    });
+    $(".h3").click(()=>
+    {
+        $(".h3").toggle('slow');
+    });
+    });
+
+    </script>
+    <style>
+        h2
+        {
+            background-color: aqua;
+            display: block;
+            width: 200px;
+            height: auto;
+        }
+    </style>
+ </head>
+ <body>
+    <h1>jQuery</h1>
+    <button id="show">CLick</button>
+    <button id="hide"">hide</button>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum enim consequatur impedit asperiores at, atque quod nesciunt quisquam perspiciatis tenetur eum sunt molestiae est! Porro eum fuga architecto tempore ad!</p><hr>
+    <h2 class="h1">hello</h2>
+    <h2 class="h2">hello</h2>
+    <h2 class="h3">hello</h2>
+    buttin
+ </body>
+ </html>

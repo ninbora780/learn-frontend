@@ -1,0 +1,27 @@
+*
+{
+    margin: 20px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+div
+{
+    width: 200px;
+    height: 200px;
+    float: left;
+    text-align: center;
+}
+.normal
+{
+    background-color: blueviolet;
+    
+
+}
+.tranform
+{
+    background-color: chartreuse;
+}
+.box
+{
+    transition: all;
+}

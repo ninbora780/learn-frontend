@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information students</title>
+    <style>
+        td,th
+        {
+            padding: 15px 20px;
+            text-align: center;
+            font-family: sans-serif;
+            background-color: rgb(225, 225, 225);
+        }
+        th
+        {
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <table border="1" style="border-collapse: collapse; margin: auto;">
+        <h1 style="text-align: center;">Information students</h1>
+        <tr>
+            <th>ID</th>
+            <th>Student name</th>
+            <th>Gender</th>
+            <th>HTML</th>
+            <th>CSS</th>
+            <th>JS</th>
+            <th>MATH</th>
+            <th>Total</th>
+            <th>Average</th>
+            <th>Grade</th>
+        </tr>
+        <script>
+            let d = document;
+            let array = [
+                ["p001" , "Sok pisey" , "Male" , 67 , 72 , 77 , 82],
+                ["p002" , "Ratanak" , "Female" , 67 , 74 , 79 , 83],
+                ["p003" , "Chatha" , "Male" , 87 , 76 , 81 , 84],
+                ["p004" , "Chathou" , "Female" , 56 , 78, 83 , 85],
+                ["p005" , "Chaterg" , "Male" , 89 , 80 , 85 , 86],
+                ["p006" , "Sita" , "Female" , 78 , 82 , 87 , 87],
+                ["p007" , "GIGI" , "Male" , 78 , 84 , 89 , 88],
+            ];
+            for (let i = 0 ; i < array.length ; i++)
+        {
+            d.write("<tr>")
+            for (j = 0 ; j < 7 ; j++)
+            {
+                d.write("<td>" + array[i][j]);
+            }
+            let total = 0;
+            total = array[i][3] + array[i][4] + array[i][5] + array[i][6];
+            d.write("<td>" + total);
+            let avg = total/4;
+            d.write("<td>" + avg);
+            let grade;
+            if (avg >=90)grade = "A";
+            else if (avg >=80)grade = "B";
+            else if (avg >=70)grade = "C";
+            else if (avg >=60)grade = "D";
+            else if (avg >=50)grade = "E";
+            else grade = "F";
+            d.write("<td>" + grade);
+            d.write("</tr>")
+        }
+        </script>
+    </table>
+</body>
+</html>

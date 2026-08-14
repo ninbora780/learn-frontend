@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <style>
+        input{
+            padding: 10px;
+        }
+        button{
+            padding: 10px;
+            margin: 20px 0;
+        }
+        label , input{
+            font-size: 15px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        $(function(){
+            let sub = 0;
+            $("button").click(function(){
+                let name = $("#name").val();
+                let q = $("#quantity").val();
+                let price = $("#price").val();
+                let add = $("this").text();
+                let total = q*price;
+                sub +=total;
+                let vat = sub*0.1;
+                let all = sub+vat;
+                let newRow = "<tr><td>" + name;
+                newRow += "<td> " + q;
+                newRow += "<td> " + price;
+                newRow += "<td>" + total;
+                let result = "<tr class= 'a'> <td colspan='3' style='text-align: center'>Sub total" +"<td>" +  sub;
+                result += "<tr class= 'a'> <td colspan='3' style='text-align: center'>VAT 10%" +"<td>" +  vat;
+                result += "<tr class= 'a'> <td colspan='3' style='text-align: center'>Total" +"<td>" +  all;
+                if(add = "Add Cost")
+                {
+                    $(".a").remove();
+                    $("#tb tbody").append(newRow);
+                    $("#tb tbody").append(result);
+                    $("#name").val("");
+                    $("#quantity").val("");
+                    $("#price").val("");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Shopping</h1>
+    <label for="name">Product name: </label>
+    <input type="text" placeholder="porduct name" id="name">
+    <label for="quantity">Quantity: </label>
+    <input type="number" placeholder="quantity" id="quantity">
+    <label for="price">Unit Price: </label>
+    <input type="number" placeholder="price" id="price"> <br>
+    <button>Add Cost</button>
+        <table id="tb" border="1" cellpadding = "9" cellspacing = "0" width="500">
+        <thead>
+            <tr>
+                <th>Product name</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Total</th>
+            </tr>
+            <tbody>
+
+            </tbody>
+        </thead>
+    </table>
+</body>
+</html>

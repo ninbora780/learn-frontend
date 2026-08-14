@@ -1,0 +1,53 @@
+body{
+    margin: 0px;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.box
+{
+    width: 200px;
+    height: 100px;
+    background-color: rgb(129, 129, 222);
+    color: azure;
+    opacity: 0.5;
+}
+.box:hover
+{
+    opacity: 1;
+}
+.box::before
+{
+    content: "before";
+    background-color: chocolate;
+}
+.box::after
+{
+    content: "before";
+    background-color: rgb(144, 210, 30);
+}
+.p::first-letter
+{
+    background-color: blue;
+    color: aqua;
+}
+.p::first-line
+{
+    content: "before";
+    background-color: chocolate;
+}
+.p::selection
+{
+    background-color: chartreuse;
+}
+h1
+{
+    text-shadow: 3px 4px 1px red;
+}
+img
+{
+    height: 300px;
+    width: 300px;
+    box-shadow: 10px 10px 2px rgb(98, 169, 5),
+                12px 12px 2px rgb(108, 21, 185);
+}

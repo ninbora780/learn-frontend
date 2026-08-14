@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login System</title>
+    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script>
+        $(function () {
+            const users = [
+                [1, "admin",      "123456", 1],
+                [2, "accountant", "123456", 0],
+                [3, "cashier",    "123456", 1],
+                [4, "tester",     "123456", 1],
+                [5, "dev",        "123456", 0],
+                [6, "superAdmin", "123456", 1]
+            ];
+            function showResult(message, type) {
+                $("#result")
+                    .text(message)
+                    .removeClass("success fail")
+                    .addClass(type);
+            }
+            $("#loginBtn").on("click", function () {
+                let username = $("#username").val().trim();
+                let password = $("#password").val().trim();
+                if (username === "" || password === "") {
+                    showResult("Please enter username and password.", "fail");
+                    return;
+                }
+                let matched = $.grep(users, function (user) {
+                    return user[1] === username && user[2] === password;
+                });
+                if (matched.length === 0) {
+                    showResult("Invalid username or password.", "fail");
+                    return;
+                }
+                if (matched[0][3] === 0) {
+                    showResult("Account is disabled. Please contact admin.", "fail");
+                    return;
+                }
+                showResult("Welcome, " + matched[0][1] + "! Login successful.", "success");
+            });
+
+        });
+    </script>
+    <style>
+        tr, th, td {
+            padding: 10px 20px;
+        }
+        .container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            gap: 8px;
+        }
+        #result {
+            margin-top: 10px;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .success {
+            color: green; 
+        }
+        .fail{
+             color: red; 
+        }
+        input{
+            padding: 10px 20px;
+        }
+        button{
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Login Form</h1>
+    <table border="1" style="border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th colspan="4">1. Users List</th>
+            </tr>
+            <tr>
+                <th>#</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>admin</td>      
+                <td>123456</td><td>1</td>
+            </tr>
+            <tr><td>2</td><td>accountant</td> 
+                <td>123456</td><td>0</td>
+            </tr>
+            <tr><td>3</td><td>cashier</td>    
+                <td>123456</td><td>1</td>
+            </tr>
+            <tr><td>4</td><td>tester</td>     
+                <td>123456</td><td>1</td></tr>
+            <tr><td>5</td><td>dev</td>       
+                 <td>123456</td><td>0</td>
+                </tr>
+            <tr><td>6</td><td>superAdmin</td> 
+                <td>123456</td><td>1</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="container">
+        <h2>Login System</h2>
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter username">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password">
+        <button id="loginBtn">Login Now</button>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

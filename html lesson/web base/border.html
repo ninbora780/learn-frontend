@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: sans-serif;
+            display: flex;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+            background-image: url(../image/angkorwat.avif);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .container
+        {
+            width: 500px;
+            background-color: rgb(236, 233, 229);
+            height: 20vh;
+            border-radius: 20px;
+            box-shadow: 3px 3px 5px black;
+            
+        }
+        .skill{
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+        .info{
+            display: flex;
+            justify-content: space-between;
+        }
+        .bar{
+            height: 9px;
+            border-radius: 999px;
+            background-color: rgb(22, 31, 31);
+            overflow: hidden;
+        }
+        .progress{
+            background-color: aqua;
+            width: 0;
+            border-radius: inherit;
+            animation: fill 0.5s forwards;
+        }
+        @keyframes fill{
+            to{
+                width: var(--width);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="skill">
+            <div class="info">
+                <span>HTML</span>
+                <span>95%</span>
+            </div>
+            <div class="bar">
+                <div class="progress" style="--width: 95%"></div>
+            </div>
+        </div>
+         <div class="skill">
+            <div class="info">
+                <span>CSS</span>
+                <span>55%</span>
+            </div>
+            <div class="bar">
+                <div class="progress" style="--width: 55%"></div>
+            </div>
+        </div>
+         <div class="skill">
+            <div class="info">
+                <span>Java script</span>
+                <span>100%</span>
+            </div>
+            <div class="bar">
+                <div class="progress" style="--width: 100%"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript lesson</h1>
+    <script>
+        function sumR(a,b)
+        {
+            let s = a + b;
+            return s; 
+        }
+        let total = sumR(80,88);
+        let avg = total/2;
+        document.write( " ah jm : " + avg);
+        function Students()
+        {
+            let data = ["bora" , 48 , "A"];
+            return data;
+        }
+        let stu = Students();
+        document.write("<br>student name : " + stu[0]);
+        document.write("<br>Score : " + stu[1]);
+        let mdate = new Date();
+        let d = mdate.getDay();
+        let dayofweek =(`sun mon tues , wed , thurs , fri , sat`);
+        document.write(dayofweek[d]);
+    </script>
+</body>
+</html>

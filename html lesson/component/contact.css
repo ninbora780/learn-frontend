@@ -1,0 +1,186 @@
+.contact-1 {
+  width: 100%;
+  max-width: 90%;
+  margin: auto;
+  height: 100vh;
+  background-color: #ebebeb;
+}
+.contact-1 .detail {
+  height: 90%;
+  width: 100%;
+  padding: 30 100px;
+}
+.contact-1 .detail form {
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
+  justify-content: center;
+  height: 100%;
+  margin: auto;
+}
+.contact-1 .detail form input {
+  height: 50px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  padding: 0 10px;
+}
+.contact-1 .detail form textarea {
+  margin-bottom: 20px;
+  font-size: 18px;
+  padding: 10px;
+}
+.contact-1 .detail form .btn {
+  text-decoration: none;
+  background-color: #2ecc71;
+  width: 120px;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  color: #1e0f0f;
+  outline: 2px solid #730707;
+  justify-content: center;
+  font-weight: bold;
+  align-items: center;
+  transition: all 0.3s linear;
+  margin: 18px 0;
+}
+.contact-1 .detail form .btn:hover {
+  background-color: blueviolet;
+  box-shadow: 2px 5px 5px black;
+}
+@media(max-width:1280px)
+{
+    .contact-1 {
+  width: 100%;
+  max-width: 90%;
+  margin: auto;
+  height: 90vh;
+}
+.contact-1 .detail {
+  height: 7in;
+  width: 100%;
+  padding: 30px 100px;
+}
+.contact-1 .detail form {
+  display: flex;
+  flex-direction: column;
+  max-width: 75%;
+  justify-content: center;
+  height: 100%;
+  margin: auto;
+}
+.contact-1 .detail form input {
+  height: 50px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  padding: 0 10px;
+}
+.contact-1 .detail form textarea {
+  margin-bottom: 20px;
+  font-size: 18px;
+  padding: 10px;
+}
+
+}
+@media(max-width:992px)
+{
+    .contact-1 {
+  width: 100%;
+  max-width: 90%;
+  margin: auto;
+  height: 90vh;
+}
+.contact-1 .detail {
+  height: 7in;
+  width: 100%;
+  padding: 30px 100px;
+}
+.contact-1 .detail form {
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  justify-content: center;
+  height: 100%;
+  margin: auto;
+}
+.contact-1 .detail form input {
+  height: 50px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  padding: 0 10px;
+}
+.contact-1 .detail form textarea {
+  margin-bottom: 20px;
+  font-size: 18px;
+  padding: 10px;
+}
+
+}
+@media(max-width:768px)
+{
+    .contact-1 {
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  height: 90vh;
+}
+.contact-1 .detail {
+  height: 7in;
+  width: 100%;
+  padding: 30px 100px;
+}
+.contact-1 .detail form {
+  display: flex;
+  flex-direction: column;
+  max-width: 95%;
+  justify-content: center;
+  height: 100%;
+  margin: auto;
+}
+.contact-1 .detail form input {
+  height: 50px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  padding: 0 10px;
+}
+.contact-1 .detail form textarea {
+  margin-bottom: 20px;
+  font-size: 18px;
+  padding: 10px;
+}
+
+}@media(max-width:600px)
+{
+    .contact-1 {
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  height: 90vh;
+}
+.contact-1 .detail {
+  height: 7in;
+  width: 100%;
+  padding: 30px 60px;
+}
+.contact-1 .detail form {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  justify-content: center;
+  height: 100%;
+  margin: auto;
+}
+.contact-1 .detail form input {
+  height: 50px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  padding: 0 10px;
+}
+.contact-1 .detail form textarea {
+  margin-bottom: 20px;
+  font-size: 18px;
+  padding: 10px;
+}
+
+}
+

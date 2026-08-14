@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Table</title>
+</head>
+<body>
+
+<h2>Generate Table</h2>
+
+<input type="number" id="rows" placeholder="Enter rows"><br><br>
+<input type="number" id="cols" placeholder="Enter cols"><br><br>
+
+<button onclick="generate()">Generate</button>
+
+<div id="table"></div>
+
+Enter A:
+<p><input type="number" id="atxt" placeholder="Enter A" size="35"></p>
+Enter B:
+<p><input type="number" id="btxt" placeholder="Enter B" size="35"></p>
+Operator:
+<p>
+    <select id="opr">
+        <option value="add">+</option>
+        <option value="sub">-</option>
+        <option value="mul">x</option>
+        <option value="div">/</option>
+    </select>
+</p>
+<button onclick="calc()">Calculate</button>
+<p id="result">Result:</p>
+<script>
+    function  calc()
+    {
+        let a = atxt.value*1;
+        let b = btxt.value*1;
+        let op = opr.value;
+        let s = 0;
+        if (op == "add") s = a + b;
+        else if (op == "sub") s = a - b;                   
+        else if (op == "mul") s = a * b;
+        else
+        {
+        if (b== 0) s = "Cannot divide by zero";
+        else s = a/b;
+        }
+        result.innerHTML=s;
+    }
+function generate() {
+    let rows = Number(document.getElementById("rows").value);
+    let cols = Number(document.getElementById("cols").value);
+
+    let num = 1;
+    let output = "<table border='1' cellpadding='10'>";
+
+    for (let i = 0; i < rows; i++) {
+        output += "<tr>";
+        for (let j = 0; j < cols; j++) {
+            output += "<td>" + num + "</td>";
+            num++;
+        }
+        output += "</tr>";
+    }
+
+    output += "</table>";
+
+    document.getElementById("table").innerHTML = output;
+}
+</script>
+
+</body>
+</html>

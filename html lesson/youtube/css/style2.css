@@ -1,0 +1,40 @@
+body
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+p:hover
+{
+    background-color: blue;
+}
+a:link
+{
+    background-color: chartreuse;
+}
+a:visited
+{
+    background-color: chartreuse;
+}
+p:nth-child(3)
+{
+    background-color: rgb(95, 34, 202);
+}
+h1:first-of-type
+{
+    background-color: brown;
+}
+p
+{
+    background-color: blueviolet;
+    color: wheat;
+}
+:not(p){
+    background-color: chartreuse;
+}
+#text:focus
+{
+    background-color: black;
+    color: azure;
+}

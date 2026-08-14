@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .form-group { margin-bottom: 15px; }
+        label { display: inline-block; width: 120px; font-weight: bold; }
+        select, input { padding: 5px; width: 200px; }
+        button { padding: 10px 20px; cursor: pointer; background: #28a745; color: white; border: none; }
+    </style>
+</head>
+<body>
+
+    <h2>Product Order</h2>
+    
+    <div class="form-group">
+        <label>Customer:</label>
+        <select id="cust">
+            <option value="Sok">Sok</option>
+            <option value="Sao">Sao</option>
+            <option value="Sam">Sam</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label>Product Name:</label>
+        <select id="pname">
+            <option value="Water">Water</option>
+            <option value="Coca">Coca</option>
+            <option value="Orange">Orange</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label>Unit Price ($):</label>
+        <input type="number" id="price" value="1.5">
+    </div>
+    
+    <div class="form-group">
+        <label>Quantity:</label>
+        <input type="number" id="qty" value="1">
+    </div>
+
+    <button onclick="order()">Order</button>
+
+    <hr>
+    <div id="bill"></div>
+
+    <script>
+        function order() {
+            // ការទាញយកតម្លៃពី Select គឺប្រើ .value ដូច Input ធម្មតាដែរ
+            let customer = document.getElementById('cust').value;
+            let product = document.getElementById('pname').value;
+            let price = Number(document.getElementById('price').value);
+            let qty = Number(document.getElementById('qty').value);
+
+            let subTotal = price * qty;
+            let disPercent = 0;
+
+            // លក្ខខណ្ឌ Discount តាមក្ដារខៀន
+            if (subTotal > 50) disPercent = 15;
+            else if (subTotal >= 21) disPercent = 10;
+            else if (subTotal >= 10) disPercent = 5;
+            else disPercent = 0;
+
+            let disAmount = subTotal * (disPercent / 100);
+            let totalAfterDis = subTotal - disAmount;
+            let vat = totalAfterDis * 0.10;
+            let payAmount = totalAfterDis + vat;
+
+            // បង្ហាញលទ្ធផល
+            document.getElementById('bill').innerHTML = `
+                <table border="1" cellpadding="10" style="border-collapse: collapse; width: 300px;">
+                    <tr><th colspan="2">Bill Information</th></tr>
+                    <tr><td>Customer</td><td>${customer}</td></tr>
+                    <tr><td>Product</td><td>${product}</td></tr>
+                    <tr><td>SubTotal</td><td>${subTotal}$</td></tr>
+                    <tr><td>Discount</td><td>${disPercent}%</td></tr>
+                    <tr><td>VAT (10%)</td><td>${vat.toFixed(2)}$</td></tr>
+                    <tr style="background: #eee;"><td><b>Pay Amount</b></td><td><b>${payAmount.toFixed(2)}$</b></td></tr>
+                </table>
+            `;
+        }
+    </script>
+
+</body>
+</html>

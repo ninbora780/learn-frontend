@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Game</title>
+    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+      <script>
+        $(function () {
+            const lessons = [
+                {
+                    label: "Lesson 1",
+                    desc: "Easy text ",
+                    texts: [
+                        "add a sad lad fall all d lad asks a lass Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, cupiditate amet nam odio quas pariatur exercitationem illo aperiam id, suscipit praesentium ."
+                    ]
+                },
+                {
+                    label: "Lesson 2",
+                    desc: "mediem text",
+                    texts: [
+                        "the quick red fox and the dog type every word you see here Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, cupiditate amet nam odio quas pariatur exercitationem illo aperiam id, suscipit praesentium sed obcaecati eos quod!"
+                    ]
+                },
+                {
+                    label: "Lesson 3",
+                    desc: "hard text",
+                    texts: [
+                        "Programming is fun when you  time. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, cupiditate amet nam odio quas pariatur exercitationem illo aperiam id, suscipit praesentium sed obcaecati eos quod! JavaScript can make websites interactive."
+                    ]
+                }
+            ];
+            let lessonIndex = 0;
+            let textIndex   = 0;
+            let currentText = "";
+            let timer       = null;
+            let timeLeft    = 120;
+            let started     = false;
+            function renderTabs() {
+                $("#lesson-tabs").empty();
+                $.each(lessons, function (i, l) {
+                    const btn = $("<button>")
+                        .addClass("lesson-tab" + (i === lessonIndex ? " active" : ""))
+                        .text(l.label)
+                        .on("click", function () {
+                            lessonIndex = i;
+                            textIndex   = 0;
+                            loadText();
+                        });
+                    $("#lesson-tabs").append(btn);
+                });
+            }
+        
+            function renderPara(typed) {
+                const html = currentText.split("").map(function (ch, i) {
+                    let cls = "";
+                    if (i < typed.length)        
+                    cls = typed[i] === ch ? "correct" : "wrong";
+                    else if (i === typed.length) 
+                    cls = "current";
+                    return "<span class='" + cls + "'>" + (ch === " " ? " " : ch) + "</span>";
+                }).join("");
+                $("#para").html(html);
+            }
+            function showBanner(msg, type) {
+                $("#banner").text(msg).attr("class", "banner show " + type);
+            }
+
+            function hideBanner() {
+                $("#banner").attr("class", "banner");
+            }
+
+              function loadText() {
+                const l     = lessons[lessonIndex];
+                textIndex   = textIndex % l.texts.length;
+                currentText = l.texts[textIndex];
+                $("#lesson-desc").text(l.desc);
+                $(".input").val("").prop("disabled", false);
+                $(".wpm").text(0);
+                $(".cpm").text(0);
+                $(".mistake").text(0);
+                timeLeft = 120;
+                $(".time").text(120);
+                clearInterval(timer);
+                started = false;
+                hideBanner();
+                renderTabs();
+                renderPara("");
+                $(".input").focus();
+            }
+            $(".input").on("input", function () {
+                if (!started) {
+                    started = true;
+                    timer = setInterval(function () {
+                        timeLeft--;
+                        $(".time").text(timeLeft);
+                        if (timeLeft <= 0) {
+                            clearInterval(timer);
+                            $(".input").prop("disabled", true);
+                            showBanner("Time's up! Click Restart to try again.", "over");
+                        }
+                    }, 1000);
+                }
+
+                const typed = $(this).val();
+                renderPara(typed);
+
+                let mistakes = 0;
+                for (let i = 0; i < typed.length; i++) {
+                    if (typed[i] !== currentText[i])
+                    mistakes++;
+                }
+                $(".mistake").text(mistakes);
+                const cpm = typed.replace(/ /g, "").length;
+                $(".cpm").text(cpm);
+                $(".wpm").text(Math.round(cpm / 5));
+                if (typed === currentText) {
+                    clearInterval(timer);
+                    showBanner("Completed! Loading next text", "success");
+                    setTimeout(function () {
+                        textIndex++;
+                        loadText();
+                    }, 900);
+                }
+            });
+
+            $(".restart").on("click", function () {
+                loadText();
+            });
+
+            $(".next").on("click", function () {
+                textIndex++;
+                loadText();
+            });
+            loadText();
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+            background: linear-gradient(135deg, #6dd5ed, #2193b0);
+        }
+
+        .container {
+            width: 800px;
+            background: #222;
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .lesson-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .lesson-tab {
+            padding: 7px 18px;
+            border-radius: 8px;
+            border: none;
+            background: #444;
+            color: #ccc;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+
+        .lesson-tab.active {
+            background: #2193b0;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .lesson-tab:hover:not(.active) {
+            background: #555;
+        }
+
+        .lesson-desc {
+            font-size: 13px;
+            color: #aaa;
+            margin-bottom: 15px;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .paragraph {
+            background: #333;
+            padding: 15px;
+            border-radius: 10px;
+            line-height: 1.9;
+            margin-bottom: 15px;
+            font-family: monospace;
+            font-size: 16px;
+            letter-spacing: 0.02em;
+            min-height: 56px;
+        }
+        .paragraph span { color: #888; }
+        .paragraph span.correct { color: #4caf50; }
+        .paragraph span.wrong { color: #f44336; background: rgba(244,67,54,0.15); border-radius: 2px; }
+        .paragraph span.current { border-bottom: 2px solid #fff; color: #ccc; }
+
+        .banner {
+            display: none;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+        .banner.show { display: block; }
+        .banner.success { background: rgba(76,175,80,0.2); color: #81c784; }
+        .banner.over    { background: rgba(244,67,54,0.2); color: #e57373; }
+
+        .input {
+            width: 100%;
+            height: 120px;
+            resize: none;
+            padding: 15px;
+            font-size: 18px;
+            font-family: monospace;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+        }
+
+        .btn-row {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .btn-row button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            background: #444;
+            color: #fff;
+            transition: background 0.15s;
+        }
+        .btn-row button:hover { background: #555; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Typing Game</h1>
+        <div class="lesson-tabs" id="lesson-tabs"></div>
+        <p class="lesson-desc" id="lesson-desc"></p>       
+        <div class="stats">
+            <span>Time: <b class="time">60</b></span>
+            <span>WPM: <b class="wpm">0</b></span>
+            <span>CPM: <b class="cpm">0</b></span>
+            <span>Mistakes: <b class="mistake" style="color:#f44336">0</b></span>
+        </div>
+        <div class="paragraph" id="para"></div>
+        <div class="banner" id="banner"></div>  
+        <textarea class="input" placeholder="Start typing here…"></textarea>
+        <div class="btn-row">
+            <button class="restart">↺ Restart</button>
+            <button class="next">Next text →</button>
+        </div>
+    </div>
+</body>
+</html>

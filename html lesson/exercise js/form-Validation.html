@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- font awesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- css link -->
+    <link rel="stylesheet" href="./form-Validation.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Create Account</h2>
+        </div>
+        <form class="form" id="form">
+            <div class="form-control">
+             <label for="name">User name : </label>
+             <input type="text" id="name" placeholder="User name">
+             <i class="fa-solid fa-circle-xmark"></i>
+             <i class="fa-solid fa-check"></i>
+             <small>Error message</small>
+           </div>
+           <div class="form-control">
+             <label for="email">Email : </label>
+             <input type="text" id="email" placeholder="Email">
+             <i class="fa-solid fa-circle-xmark"></i>
+             <i class="fa-solid fa-check"></i>
+             <small>Error message</small>
+           </div>
+           <div class="form-control">
+             <label for="password">Password : </label>
+             <input type="text" id="password" placeholder="Password">
+             <i class="fa-solid fa-circle-xmark"></i>
+             <i class="fa-solid fa-check"></i>
+             <small>Error message</small>
+           </div>
+           <div class="form-control">
+             <label for="confirm">Confirm Password : </label>
+             <input type="text" id="confirm" placeholder="comfirm password">
+             <i class="fa-solid fa-circle-xmark"></i>
+             <i class="fa-solid fa-check"></i>
+             <small>Error message</small>
+           </div>
+           <button>Submit</button>
+        </form>
+    </div>
+    <script src="form-Validation.js"></script>
+</body>
+</html>

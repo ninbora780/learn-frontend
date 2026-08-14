@@ -1,0 +1,6 @@
+javasrcipt was made by Brendan Eich was born in 04 december 1995.
+javasrcipt was used for make moving webside or other. 
+javasrcipt have 3 :
+-in-line js
+-internal js
+-external js

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script>
+    // $(selector).slideDown(speed , callback)
+    // $(selector).slideUp(speed , callback)
+    // $(selector).slideToggle(speed , callback)
+        $(()=>{
+        $(".menu").click(()=>{
+        $(".main").slideToggle("slow");
+    });
+});
+    </script>
+    <style>
+        .menu
+        {
+            background-color: cadetblue;
+            width: 50%;
+            height: 50px;
+            text-align: center;
+            color:aliceblue;
+            font-size: 30px;
+            padding-top: 10px;
+        }
+        .menu:hover{
+            background-color: blueviolet;
+            cursor: pointer;
+        }
+        li
+        {
+            background-color: cadetblue;
+            width: 50%;
+            height: 50px;
+            text-align: center;
+            color:aliceblue;
+            font-size: 30px;
+            padding-top: 10px 0;
+            margin: 10px 0;
+        }
+        
+
+    </style>
+
+</head>
+<body>
+    <h1>Creat menu js</h1>
+    <div class="menu">Create manu</div>
+    <ul class="main">
+        <li>Apoy</li>
+        <li>Ahong</li>
+        <li>Ara</li>
+        <li>Arong</li>
+    </ul>
+</body>
+</html>

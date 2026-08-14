@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(()=>{
+      $("button").click(()=>{
+        let add    = $(".add").val();
+        let sub    = $(".sub").val();
+        let mul    = $(".mul").val();
+        let a      = $("#a").val();
+        let b      = $("#b").val();
+        let divide = $(".divide").val();
+        let result = 0;
+
+        if(add){
+          result = a + b;
+        }
+        else if(sub){
+          result = a - b;
+        }
+        else if(mul){
+          result = a * b;
+        }
+        else {
+          if(b == 0){
+            result = "cannot divide by zero!"; // ✅ Fix 1: removed $()
+          }
+          else{
+            result = a / b;
+          }
+        }
+        $(".result").html("Result : " + result);
+      });
+    });
+  </script>
+  <style>
+    input        { padding: 10px; }
+    button       { padding: 8px 18px; font-size: 20px; }
+    button:hover { background-color: aqua; }
+  </style>
+</head>
+<body>
+  <h1>Calculate</h1>
+  <label for="a">A : </label>
+  <input type="number" id="a" placeholder="Enter number"><br><br>
+  <label for="b">B : </label>
+  <input type="number" id="b" placeholder="Enter number"><br><br>
+  <button class="add"> + </button>
+  <button class="sub"> - </button>
+  <button class="mul"> x </button>
+  <button class="divide"> / </button>
+  <p class="result">result will be show here...</p> <!-- ✅ Fix 2: "reult" → "result" -->
+</body>
+</html>

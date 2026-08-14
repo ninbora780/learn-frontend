@@ -1,0 +1,416 @@
+.capital-page
+{
+    background-color: #ebebeb;
+    width: 100%;
+    max-width: 90%;
+    margin: auto;
+    padding: 30px 100px;
+}
+.title-capital
+{
+    background-color: #ebebeb;
+    width: 100%;
+    max-width: 90%;
+    margin: auto;
+    text-align: center;
+    font-size: 4em;
+    padding-top: 5px;
+}
+.content-page
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.content-page h1
+{
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+.content-page img
+{
+    width: 80%;
+}
+.content-page .dsc
+{
+    margin-top: 15px;
+    text-indent: 80px;
+    text-align: justify;
+    background-color: #fff;
+    padding: 5px;
+}
+.small-title
+{
+    text-decoration: underline;
+    font-size: 1.8em;
+    margin-top: 20px;
+}
+@media(max-width:992px)
+{
+    .content-page img
+    {
+    width: 90%;
+    }
+    .content-page .dsc
+    {
+    font-size: 14px;
+    margin-top: 15px;
+    text-indent: 80px;
+    text-align: justify;
+    background-color: #fff;
+    padding: 5px;
+    }
+}
+@media(max-width:768px)
+{
+    .title-capital
+    {
+        max-width: 100%;
+    }
+    .capital-page
+    {
+        max-width: 100%;
+    }
+    .content-page img
+    {
+        width: 98%;
+    }
+    .content-page .dsc
+    {
+        font-size: 12.8px;
+        text-indent: 40px;
+    }
+}
+@media(max-width:600px)
+{
+      .content-page img
+    {
+        width: 100%;
+    }
+    .content-page .dsc
+    {
+        font-size: 12px;
+        text-indent: 40px;
+    }
+}
+/* top sights */
+.top-sights
+{
+    margin-top: 30px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    
+}
+.top-sights .top-sights-content img
+{
+    width: 100%;
+    height: 500px;
+    border-radius: 6px;
+}
+.top-sights .top-sights-content
+{
+    width: 95%;
+    height: 825px;
+    background-color: #d8d8d8;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 6px;
+    box-shadow: 2px 0 5px #333;
+    transition: all 0.2s linear;
+}
+.top-sights .top-sights-content:hover
+{
+    box-shadow: 0px 2px 5px #333;
+}
+.top-sights .top-sights-content h2
+{
+    margin: 10px 0 0 0;
+    font-size: 30px;
+}
+.top-sights .top-sights-content .rate
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+}
+.top-sights .top-sights-content .rate div{
+    margin-right: 8px;
+}
+.top-sights .top-sights-content .rate .rate-number
+{
+    font-weight: bold;
+}
+.top-sights .top-sights-content .btn
+{
+    width:90px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #333;
+    text-decoration: none;
+    color: #d8d8d8;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:30px;
+    box-shadow: 2px 2px 5px black;
+    font-weight: bold;
+}
+@media(max-width:1280px)
+{
+    .top-sights .top-sights-content
+{
+    width: 95%;
+    height: 777px;
+    background-color: #d8d8d8;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 6px;
+    box-shadow: 2px 0 5px #333;
+    transition: all 0.2s linear;
+}
+    .top-sights .top-sights-content img
+    {
+        width: 100%;
+        height: 400px;
+        border-radius: 6px;
+    }
+}
+@media(max-width:992px)
+{
+    .top-sights
+    {
+        margin-top: 30px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    
+    }
+    .top-sights .top-sights-content
+    {
+        width: 95%;
+        height: 700px;
+        background-color: #d8d8d8;
+        padding: 15px;
+        margin-top: 20px;
+        border-radius: 6px;
+        box-shadow: 2px 0 5px #333;
+        transition: all 0.2s linear;
+    } 
+}
+@media(max-width:768px)
+{
+    .top-sights .top-sights-content
+{
+    width: 95%;
+    height: 605px;
+    background-color: #d8d8d8;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 6px;
+    box-shadow: 2px 0 5px #333;
+    transition: all 0.2s linear;
+}
+    .capital-page
+    {
+     background-color: #ebebeb;
+     max-width: 100%;
+     padding: 30px 50px;
+    }
+    .top-sights .top-sights-content h2
+    {
+        margin: 10px 0 0 0;
+        font-size: 24px;
+    }
+    .top-sights
+    {
+        margin-top: 30px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    
+    }
+    .top-sights .top-sights-content
+    {
+        width: 95%;
+        height: 760px;
+        background-color: #d8d8d8;
+        padding: 15px;
+        margin-top: 20px;
+        border-radius: 6px;
+        box-shadow: 2px 0 5px #333;
+        transition: all 0.2s linear;
+    } 
+}
+.comment
+{
+    width: 100%;
+    max-width: 90%;
+    margin: auto;
+    background-color: lightgray;
+    padding: 30px 100px;
+}
+.comment h2
+{
+    font-size: 2.6em;
+    margin-bottom: 20px;
+}
+.comment form
+{
+    display: flex;
+    flex-direction: column;
+}
+.comment form input
+{
+    height: 40px;
+    margin-bottom: 20px;
+    font-size: 17px;
+    padding: 10px;
+}
+.comment form textarea
+{
+    margin-bottom: 10px;
+    font-size: 17px;
+    padding: 10px;
+}
+.comment form .btn
+{
+    width:90px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #333;
+    text-decoration: none;
+    color: #d8d8d8;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:30px;
+    box-shadow: 2px 2px 5px black;
+    font-weight: bold;
+}
+.comment h4
+{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.comment .comment-status
+{
+    display: flex;
+    background-color:#fcfcfc;
+    align-items: center;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    height: 80px;
+}
+.comment .comment-status img
+{
+    width: 5%;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #2e2e2e;
+}
+.comment .comment-status .active-comment
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.comment .comment-status .active-comment .comment-word
+{
+    display: flex;
+    align-items: center;
+}
+.comment .comment-status .active-comment .comment-word .username
+{
+    margin: 0 10px;
+}
+.comment .comment-status .active-comment .comment-word .comment-article
+{
+    font-size: 14px;
+}
+.comment .comment-status .active-comment .activity
+{
+    display: flex;
+    margin-left: -45px;
+}
+.comment .comment-status .active-comment .activity a{
+    text-decoration: none;
+    margin: 0 5px;
+}
+@media(max-width:1280px)
+{
+    .comment .comment-status img
+      {
+          width: 7%;
+          height: 55px;
+          border-radius: 50%;
+          border: 2px solid #2e2e2e;
+      }
+}
+@media(max-width:992px)
+{
+    .comment .comment-status img
+      {
+          width: 10%;
+          height: 50px;
+          border-radius: 50%;
+          border: 2px solid #2e2e2e;
+      }
+}
+@media(max-width:768px)
+{
+    .comment .comment-status img
+      {
+          width: 16%;
+          height: 50px;
+          border-radius: 50%;
+          border: 2px solid #2e2e2e;
+      }
+}
+@media(max-width:600px)
+{
+    .comment .comment-status img
+      {
+          width: 13%;
+          height: 50px;
+          border-radius: 50%;
+          border: 2px solid #2e2e2e;
+      }
+      .comment
+      {
+          width: 100%;
+          max-width: 100%;
+          margin: auto;
+          background-color: lightgray;
+          padding: 30px 50px;
+      }
+      .comment .comment-status .active-comment .comment-word .username
+        {
+            font-size: 15px;
+            margin: 0 10px;
+        }
+        .comment .comment-status .active-comment .comment-word .comment-article
+       {
+           font-size: 12px;
+       }
+       .comment .comment-status .active-comment .activity
+       {
+           margin-left: -25px;
+       }
+       .comment .comment-status
+      {
+            display: flex;
+            background-color:#fcfcfc;
+            align-items: center;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            height: 70px;
+      }
+}
+/* 
+/* end of top sights */

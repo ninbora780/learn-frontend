@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water bill</title>
+    <style>
+        .container
+        {
+            width: 100%;
+        }
+        .container h1
+        {
+            text-align: center;
+            text-decoration: slateblue underline;
+        }
+        tr td{
+            border: 1;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table 
+        {
+            margin: auto;
+            margin-bottom: 20px;
+            width: 360px;
+            height: 15vh;
+            background-color: antiquewhite;
+            box-shadow: 3px 3px 2px rgb(56, 56, 56);
+            border-collapse: collapse;
+        }
+        input
+        {
+            border-collapse: collapse;
+            width:100%;
+            padding: 10px 0 10px ;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .container button
+        {
+            padding: 10px;
+            font-weight: bold;
+            font-size: 17px;
+            transition: all 0.3s ease;
+        }
+        button:hover
+        {
+            transform: scale(1.05);
+            box-shadow: 5px 5px 3px black;
+           
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+     <h1>water bill</h1>
+    <table id="table" border="1">
+        <tr>
+            <td><label for="Name">Name customer : </label>
+            </td>
+            <td>
+                <input type="text" id="name" placeholder="Enter name">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="old">Old number :</label>
+            </td>
+            <td>
+                <input type="number" id="old" placeholder="Enter old number">
+            </td>
+        </tr>
+        <tr>
+            <td><label for="new">New number :</label></td>
+            <td>
+                <input type="number" id="new" placeholder="Enter new number">
+            </td>
+        </tr>
+    <button onclick="calculate()">Calculate</button>
+    <div id="result"> </div>
+   </div>
+    <script>
+        function calculate()
+        {
+            let name = document.getElementById("name").value;
+            let New = document.getElementById("new").value;
+            let Old = document.getElementById("old").value;
+                sub = New - Old;
+                price = 0;
+            if (sub >=1 && sub <=10)
+            {
+                price = sub*1000;
+            }
+            else if (sub >10 && sub <=20)
+            {
+                price =10000 + (sub-10)*1500;
+            }
+            else if (sub >20 && sub <=30)
+                {
+                    price =25000 + (sub-20)*2000;
+                }
+            else
+                {
+                    price =45000 + (sub-30)*3000;
+                }
+                document.write("<tr>")
+                document.write("<td>" + "Name : " + name + "</td>");
+                document.write("<td>" + "Old Number : " + Old + "</td>");
+                document.write("<td>" + "New Number : " + New + "</td>");
+                document.write("<td>" + "Price :" + price + "</td>");
+                document.write("</tr>")
+        }
+    </script>
+    </table>
+</body>
+</html>

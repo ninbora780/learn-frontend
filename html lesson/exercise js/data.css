@@ -1,0 +1,50 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1
+{
+    margin: 20px;
+}
+
+.container > .card
+{
+    width: 390px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 4px #a9cce3;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-family: sans-serif;
+    background-color: rgb(207, 214, 230);
+    margin-bottom: 20px;
+}
+.container >.card:hover
+{
+    box-shadow: 4px 3px 3px #a9cce3;
+}
+.container>.card>.image
+{
+    width: 30%;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgb(255, 255, 255);
+}
+.container>.card>.image img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card >.content
+{
+    width: 66%;
+    line-height: 1.7;
+}

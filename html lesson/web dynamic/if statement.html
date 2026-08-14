@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if statement</title>
+</head>
+<body>
+    <h1>javasrcip if statement</h1>
+    <script>
+        // let d=new Date();
+        // let time=d.getHours();
+        // if(time<7)
+        // {
+        // document.write("good moring my princess ")
+        // }
+        // else
+        // {
+        //     document.write("get up pls my love, it's time to go to our wedding.")
+        // }
+    //     let html=90;
+    //     let css=80;
+    //     let js=87;
+    //     let total;
+    //     total=css+html+js;
+    //     let avg;
+    //     avg=(css+html+js)/3;
+    //     document.write("total score is: " +total  +"<br>");
+    //     document.write("average score is: "+avg +"<br>");
+    // if(avg>=90)
+    // {
+    //     document.write("student grade A");
+    // }
+    // else if(avg>=80&&avg<90)
+    // {
+    //     document.write("Student grade B");
+    // }
+    // else if(avg>=70&&avg<80)
+    // {
+    //     document.write("Student grade C");
+    // }
+    // else if(avg>=60&&avg<70)
+    // {
+    //     document.write("Student grade D");
+    // }
+    //   else if(avg>=50&&avg<60)
+    // {
+    //     document.write("Student grade E");
+    // }
+    // else
+    // {
+    //     document.write("Student grade F");
+    // }
+    // document.write("<br>");
+    // switch cass
+    var dateobj=new Date();
+    var today=dateobj.getDay();
+    var day=dateobj.getDate();
+    var month=dateobj.getMonth();
+    var year=dateobj.getFullYear();
+    document.write("ថ្ងៃនេះជា");
+    switch(today)
+    {
+        case 1: document.write("ថ្ងៃច័ន្ទ");
+        break;
+        case 2:document.write("ថ្ថ្ងៃ​អង្គារ៏");
+        break;
+        case 3:document.write("ថ្ងៃ​ពុធ");  
+        break;
+        case 4:
+        document.write("ថ្ងៃ​ព្រហស្បតិ៏");
+        break;
+        case 5:document.write("ថ្ងៃ​សុក្រ");
+        break;
+        case 6:document.write("ថ្ងៃ​សៅរ៏");
+        break;
+        case 0:document.write("ថ្ងៃ​អាទិត្យ");
+        break;
+    }
+    document.write(" ទី " + day + " ខែ " );
+     switch(month)
+    {
+        case 0: document.write("មករា");
+        break;
+        case 1:document.write("កុម្ភះ");
+        break;
+        case 2:document.write("មិនា");  
+        break;
+        case 3: document.write("មេសា");
+        break;
+        case 4:document.write("ឧសភា");
+        break;
+        case 5:document.write("មិថុនា");
+        break;
+        case 6:document.write("កក្កដា");
+        break;
+        case 7:document.write("សីហា");
+        break;
+        case 8:document.write("កញ្ញា");
+        break;
+        case 9:document.write("តុលា");
+        break;
+        case 10:document.write("វិច្ឆកា");
+        break;
+        case 11:document.write("ធ្នូ");
+        break;
+    }
+    document.write(" ឆ្នាំ " + year);
+    </script>
+</body>
+</html>
